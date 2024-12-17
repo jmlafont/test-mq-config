@@ -1,0 +1,10 @@
+resources:
+- ../base
+
+namespace: ibm-mq
+
+configMapGenerator:
+- files:
+  - test.conf
+  name: myconfig
+

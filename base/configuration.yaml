@@ -1,0 +1,8 @@
+nameReference:
+- kind: ConfigMap
+  fieldSpecs:
+  - kind: QueueManager
+    path: spec/queueManager/ini/configMap/name
+  - kind: QueueManager
+    path: spec/volumes/configMap/name
+
