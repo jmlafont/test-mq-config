@@ -7,3 +7,6 @@ configMapGenerator:
 - files:
   - test.conf
   name: myconfig
+
+generatorOptions:
+  disableNameSuffixHash: true
