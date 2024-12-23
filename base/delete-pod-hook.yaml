@@ -17,7 +17,7 @@ spec:
             - '-c'
             - |
               echo "delete pods"
-              oc get pods 
+              oc delete pods --all
           resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
