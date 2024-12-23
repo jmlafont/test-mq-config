@@ -1,0 +1,29 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  name: delete-pod
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      # serviceAccountName: checker
+      containers:
+        - name: delete-pod
+          image: 'quay.io/openshift/origin-cli:4.14.0'
+          command:
+            - /bin/bash 
+            - '-c'
+            - | 
+              sleep 300
+              echo "delete pods"
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Never
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler

@@ -1,3 +1,4 @@
 configurations:
 - configuration.yaml
+- delete-pod-hook.yaml
 
