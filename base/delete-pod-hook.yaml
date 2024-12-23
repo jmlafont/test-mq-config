@@ -15,9 +15,7 @@ spec:
           command:
             - /bin/bash 
             - '-c'
-            - | 
-              sleep 300
-              echo "delete pods"
+            - echo "delete pods"
           resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
