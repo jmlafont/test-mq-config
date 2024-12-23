@@ -3,6 +3,6 @@ configurations:
 resources:
 - delete-pod-hook.yaml
 - sync-cm.yaml
-- delete-pod-role
+- delete-pod-role.yaml
 
 
