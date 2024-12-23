@@ -17,7 +17,7 @@ spec:
             - '-c'
             - |
               echo "delete pods"
-              oc delete pods --all
+              oc delete pods myqm-ibm-mq-0
               sleep 30
           resources: {}
           terminationMessagePath: /dev/termination-log
